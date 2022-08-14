@@ -38,13 +38,13 @@ while on:
         
 
     if snake.posX() > 290 or snake.posX() < -298 or snake.posY() > 298 or snake.posY() < -290 :
-        on = False
-        sc.game_over()
+        sc.reset()
+        snake.reset()
 
     for seg in snake.segments[2:-1]:
         if snake.head.distance(seg) < 10:
-            on = False
-            sc.game_over()
+            sc.reset()
+            snake.reset()
    
     
     
